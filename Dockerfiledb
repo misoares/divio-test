@@ -1,0 +1,8 @@
+ image: postgres:12-alpine
+    restart: always
+    expose:
+      - 5432
+    environment:
+      - "POSTGRES_PASSWORD=clojure"
+      - "POSTGRES_USER=clojure"
+      - "POSTGRES_DB=clojure"

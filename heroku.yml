@@ -1,0 +1,16 @@
+build:
+  docker:
+    db: postgres:12-alpine
+    clj: Dockerfile
+  config:
+    DB_HOST: db
+    WEB_HOST: 0.0.0.0
+    POSTGRES_PASSWORD: clojure
+    POSTGRES_USER: clojure
+    POSTGRES_DB: clojure
+run:
+  clj: java -jar app.jar
+release:
+  image: clj
+  command:
+    - java -jar app.jar
